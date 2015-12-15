@@ -1,25 +1,31 @@
 
 <html>
   <head>
-  <title>My Now Amazing Webpage</title>
-<!--   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
+  <title>Soonhee Moon</title>
+
+  <link rel="stylesheet" href="css/unslider.css">
+  <style>
+    
+  
+  </style>
+
   </head>
   <body>
 
-  <div class="your-class">
-    <div id="test1">your content</div>
-    <div>your content</div>
-    <div>your content</div>
-  </div>
+  <div class="my-slider">
+  <ul>
+    <li id="test1">My slide</li>
+    <li>Another slide</li>
+    <li>My last slide</li>
+  </ul>
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+  <script type="text/javascript" src="js/unslider-min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function(){
-      // $('.your-class').slick({
-      // });
+      $('.my-slider').unslider();
       $( "#test1" ).load( "http://callil.github.io/soonheeFinal/01/index.html" );
     });
   </script>
