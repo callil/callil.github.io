@@ -5,8 +5,8 @@
 
   <link rel="stylesheet" href="css/unslider.css">
   <style>
-    
-  
+
+
   </style>
 
   </head>
@@ -14,7 +14,11 @@
 
   <div class="my-slider">
   <ul>
-    <li id="test1">My slide</li>
+    <li id="test1">
+      <iframe src="http://callil.github.io/soonheeFinal/01/index.html" width="100%" height="100%">
+       <p>Your browser does not support iframes.</p>
+      </iframe>
+    </li>
     <li>Another slide</li>
     <li>My last slide</li>
   </ul>
@@ -26,7 +30,6 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.my-slider').unslider();
-      $( "#test1" ).load( "http://callil.github.io/soonheeFinal/01/index.html" );
     });
   </script>
 
