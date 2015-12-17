@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>three.js - kinect</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000000;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				color: #ffffff;
+
+				font-family: Monospace;
+				font-size: 13px;
+				text-align: center;
+				font-weight: bold;
+
+				position: absolute;
+				top: 5px; width: 100%;
+			}
+
+			a {
+
+				color: #0040ff;
+
+			}
+			#back{
+				width: 40px;
+				height: 60px;
+				/*background-color: rgba(255,255,255,.6);*/
+				border-radius: 10px;
+				position: absolute;
+				left: -5px;
+				top: 400px;
+			}
+
+			#back a{
+				color: white;
+				font-size: 24px;
+				padding: 10px;
+				text-align: center;
+			}
+
+			#forward{
+				width: 40px;
+				height: 60px;
+				/*background-color: rgba(255,255,255,.6);*/
+				border-radius: 10px;
+				position: absolute;
+				right: -5px;
+				top: 400px;
+			}
+
+			#forward a{
+				color: white;
+				font-size: 24px;
+				padding: 10px;
+				text-align: center;
+			}
+			#video{
+				display: flex;
+				align-content: center;
+				justify-content: center;
+			}
+			#video video{
+				padding-top: 100px;
+				max-width: 50%;
+			}
+
+		</style>
+		<script>
+			function toggleFullScreen() {
+			  if (!document.fullscreenElement &&    // alternative standard method
+			      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+			    if (document.documentElement.requestFullscreen) {
+			      document.documentElement.requestFullscreen();
+			    } else if (document.documentElement.msRequestFullscreen) {
+			      document.documentElement.msRequestFullscreen();
+			    } else if (document.documentElement.mozRequestFullScreen) {
+			      document.documentElement.mozRequestFullScreen();
+			    } else if (document.documentElement.webkitRequestFullscreen) {
+			      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+			    }
+			  } else {
+			    if (document.exitFullscreen) {
+			      document.exitFullscreen();
+			    } else if (document.msExitFullscreen) {
+			      document.msExitFullscreen();
+			    } else if (document.mozCancelFullScreen) {
+			      document.mozCancelFullScreen();
+			    } else if (document.webkitExitFullscreen) {
+			      document.webkitExitFullscreen();
+			    }
+			  }
+			}
+			document.addEventListener("keydown", function(e) {
+			  if (e.keyCode == 13) {
+			    toggleFullScreen();
+			  }
+			}, false);
+		</script>
+	</head>
+	<body>
+		<div id="back">
+			<a href="http://callil.github.io/soonheeFinal/06/index.html">⇽</a>
+		</div>
+
+		<div id="forward">
+			<a href="http://callil.github.io/soonheeFinal/01/index.html">⇾</a>
+		</div>
+
+		<div id='video'>
+			<video width="792" height="594" autoplay>
+			  <source src="textures/thesis.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			</video>
+		</div>
+	</body>
+</html>
